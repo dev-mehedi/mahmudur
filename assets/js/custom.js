@@ -138,4 +138,11 @@ $(function () {
 
     });
 
-});
+    jQuery(this).appear(function () {
+        jQuery(this).animate({ opacity: 1, left: "0px" }, 800);
+        var b = jQuery(this).find(".skill-bar").attr("data-width");
+        jQuery(this).find(".skill-bar").animate({
+            width: b + "%"
+        }, 2500, "linear");
+    });
+});   
