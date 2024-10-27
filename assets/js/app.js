@@ -24,7 +24,7 @@ function initTextAnimSlider() {
 
 		setTimeAnim = setTimeout(function () {
 			animFirstLoad = true;
-			
+
 			if (animPrevItem !== null) {
 				animPrevItem.classList.add(animOut);
 			}
@@ -49,9 +49,8 @@ function initTextAnimSlider() {
 	function getHolderWidth() {
 		var itemsWidth = [];
 
-		for(var i =0; i < textAnimItem.length; i++) {
+		for (var i = 0; i < textAnimItem.length; i++) {
 			itemsWidth.push(textAnimItem[i].clientWidth);
-			console.log(textAnimItem[i].clientWidth);
 		}
 
 		// var biggestWidth = Math.max.apply(null, itemsWidth) + 'px';
@@ -64,7 +63,7 @@ function initTextAnimSlider() {
 		clearTimeout(setTimeAnimResize);
 		getHolderWidth();
 
-		setTimeAnimResize = setTimeout(function() {
+		setTimeAnimResize = setTimeout(function () {
 			animFunc();
 		}, 50);
 	}
